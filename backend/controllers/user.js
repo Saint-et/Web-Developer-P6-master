@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv").config({path: "./env/.env"});
 //route model user
 const User = require('../models/user');
 
@@ -41,7 +41,7 @@ exports.signup = (req, res, next) => {
               //création du token de connexion
               token: jwt.sign(
                 { userId: user._id },
-                process.env.APP_SECRET,
+                process.env.TOKEN_SECRET,
                 { expiresIn: '24h' }
               )
             });
