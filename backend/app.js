@@ -1,13 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
+require("dotenv").config();
+
 
 //route à suivre depuis le backend
 const sauceRoutes = require('./routes/sauces');
 const userRoutes = require('./routes/user');
 
 // Connection à la Base de donné (DATAbase)
-mongoose.connect('mongodb+srv://Meddy:meddy971@p6-open.hrzcw.mongodb.net/test',
+mongoose.connect(process.env.DATABASE,
   { useNewUrlParser: true,
     useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie !'))
@@ -24,7 +26,7 @@ mongoose.connect('mongodb+srv://Meddy:meddy971@p6-open.hrzcw.mongodb.net/test',
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
     next();
   });
-  
+
 //route à suivre depuis l'api
 app.use('/api/sauces', sauceRoutes);
 app.use('/api/auth', userRoutes);

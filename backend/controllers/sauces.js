@@ -3,13 +3,13 @@ const Sauce = require('../models/createSauce');
 
 // fs signifie <file system> accès au fichier
 const fs = require('fs');
-const { json } = require('express');
 
 //récupération de toutes les sauces
-exports.getAllSauces = (req, res, next) => {
+exports.getAllSauces = async (req, res, next) => {
   Sauce.find()
     .then(sauces => res.status(200).json(sauces))
     .catch(error => res.status(400).json({ error }));
+    
 }
 //récupération d'une sauce
 exports.getOneSauce = (req, res, next) => {
