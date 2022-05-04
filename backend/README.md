@@ -1,10 +1,16 @@
 # BACKEND _
 
-Créer votre .env dans le fichier env
+## ENT
+
+Créer votre .env dans un dossier env dans le backend
 
 PORT=3000
 TOKEN_SECRET="SECRET_TOKEN"
 DATABASE=mongodb compass
+
+## IMAGES
+
+Créer dossier images dans le backend
 ________________________________________________________________
 # LOGICIEL À INSTALLER :
 
