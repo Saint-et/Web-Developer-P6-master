@@ -7,7 +7,7 @@ const sauceRoutes = require('./routes/sauces');
 const userRoutes = require('./routes/user');
 
 // Connection à la Base de donné (DATAbase)
-mongoose.connect('mongodb://localhost:27017/P6',
+mongoose.connect('mongodb+srv://Meddy:meddy971@p6-open.hrzcw.mongodb.net/test',
   { useNewUrlParser: true,
     useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie !'))
