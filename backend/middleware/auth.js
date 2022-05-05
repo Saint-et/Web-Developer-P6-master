@@ -1,3 +1,4 @@
+//Utilisation de la variable d'environement
 require("dotenv").config({path: "./env/.env"});
 //utilisation de jsonwebtoken pour le token d'authentification
 const jwt = require('jsonwebtoken');
