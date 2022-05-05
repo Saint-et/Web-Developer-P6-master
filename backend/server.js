@@ -1,6 +1,6 @@
 const http = require('http');
 const app = require('./app');
-//Utilisation de la variable d'environement
+//Utilisation de la variable d'environnement
 require("dotenv").config({path: "./env/.env"});
 
 const normalizePort = val => {

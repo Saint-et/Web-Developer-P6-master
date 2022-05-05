@@ -1,4 +1,4 @@
-//Utilisation de la variable d'environement
+//Utilisation de la variable d'environnement
 require("dotenv").config({path: "./env/.env"});
 //route model user
 const User = require('../models/user');
