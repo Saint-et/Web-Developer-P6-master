@@ -9,8 +9,12 @@ const bcrypt = require('bcrypt');
 //utilisation de jsonwebtoken pour le token d'authentification
 const jwt = require('jsonwebtoken');
 
+
 //inscription avec vérification Email et hash mot de passe
 exports.signup = (req, res, next) => {
+  if (req.body.password.length < 6) {
+    return res.status(400).json({ error })
+  }
     bcrypt.hash(req.body.password, 10)
       .then(hash => {
         const user = new User({
