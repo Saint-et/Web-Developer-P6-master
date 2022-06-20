@@ -5,7 +5,7 @@
 Créer votre .env dans un dossier env dans le backend
 
 PORT=3000
-TOKEN_SECRET="SECRET_TOKEN"
+TOKEN_SECRET=put your token
 DATABASE=mongodb compass
 
 ## IMAGES
